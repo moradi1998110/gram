@@ -7,7 +7,7 @@ set -euo pipefail
 Prefix="${1:?usage: build_qxmpp.sh <install-prefix>}"
 ScriptPath="$(cd "$(dirname "$0")" && pwd)"
 Source="$ScriptPath/../../ThirdParty/qxmpp"
-Build="$ScriptPath/../../../../out-qxmpp"
+Build="$ScriptPath/../../../out-qxmpp"
 
 if [ ! -f "$Source/CMakeLists.txt" ]; then
   echo "QXmpp sources not found in $Source (run: git submodule update --init Telegram/ThirdParty/qxmpp)"

@@ -1,6 +1,7 @@
 name: Linux.
 
 on:
+  workflow_dispatch:
   push:
     # Pushes to the canary or private-ci branches run their own workflows.
     branches-ignore:
@@ -19,6 +20,7 @@ on:
       - 'snap/**'
       - 'Telegram/build/**'
       - '!Telegram/build/docker/centos_env/**'
+      - '!Telegram/build/xmpp/**'
       - 'Telegram/Resources/uwp/**'
       - 'Telegram/Resources/winrc/**'
       - 'Telegram/SourceFiles/platform/win/**'
@@ -38,6 +40,7 @@ on:
       - 'snap/**'
       - 'Telegram/build/**'
       - '!Telegram/build/docker/centos_env/**'
+      - '!Telegram/build/xmpp/**'
       - 'Telegram/Resources/uwp/**'
       - 'Telegram/Resources/winrc/**'
       - 'Telegram/SourceFiles/platform/win/**'
@@ -152,7 +155,7 @@ jobs:
           -e CONFIG=Debug \
           -e CCACHE_SLOPPINESS=pch_defines,time_macros \
           $IMAGE_TAG \
-          env -u CCACHE_DISABLE /usr/src/tdesktop/Telegram/build/docker/centos_env/build.sh \
+          env -u CCACHE_DISABLE /usr/src/tdesktop/Telegram/build/xmpp/docker_build.sh \
           -D CMAKE_CONFIGURATION_TYPES=Debug \
           -D CMAKE_C_FLAGS_DEBUG="-O0 -fpch-preprocess" \
           -D CMAKE_CXX_FLAGS_DEBUG="-O0 -fpch-preprocess" \
