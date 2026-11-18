@@ -38,6 +38,7 @@ include(cmake/lib_widget_sandbox.cmake)
 include(cmake/td_export.cmake)
 include(cmake/td_gram.cmake)
 include(cmake/td_iv.cmake)
+include(cmake/td_xmpp.cmake)
 include(cmake/td_lang.cmake)
 include(cmake/td_mtproto.cmake)
 include(cmake/td_scheme.cmake)
@@ -89,6 +90,7 @@ PRIVATE
     tdesktop::td_export
     tdesktop::td_gram
     tdesktop::td_iv
+    tdesktop::td_xmpp
     tdesktop::td_lang
     tdesktop::td_mtproto
     tdesktop::td_scheme
