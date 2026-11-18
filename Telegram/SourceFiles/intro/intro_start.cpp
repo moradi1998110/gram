@@ -7,6 +7,8 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
 */
 #include "intro/intro_start.h"
 
+#include "xmpp/xmpp_intro_login.h"
+
 #include "lang/lang_keys.h"
 #include "intro/intro_qr.h"
 #include "intro/intro_phone.h"
@@ -31,7 +33,7 @@ StartWidget::StartWidget(
 
 void StartWidget::submit() {
 	account().destroyStaleAuthorizationKeys();
-	goNext<QrWidget>();
+	goNext<Xmpp::IntroLoginWidget>();
 }
 
 rpl::producer<QString> StartWidget::nextButtonText() const {

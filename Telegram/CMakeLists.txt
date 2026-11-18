@@ -1527,6 +1527,8 @@ PRIVATE
     intro/intro_step.h
     intro/intro_widget.cpp
     intro/intro_widget.h
+    xmpp/xmpp_intro_login.cpp
+    xmpp/xmpp_intro_login.h
     iv/iv_cached_media.cpp
     iv/iv_cached_media.h
     iv/editor/iv_editor_button_box.cpp

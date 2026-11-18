@@ -452,6 +452,14 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
 "lng_bad_photo" = "Sorry, Telegram can't process that type of image.";
 "lng_bad_video" = "Sorry, Telegram can't process that type of video.";
 
+"lng_xmpp_login_title" = "Sign in";
+"lng_xmpp_login_desc" = "Enter your XMPP address and password.";
+"lng_xmpp_jid" = "XMPP address (name@server)";
+"lng_xmpp_password" = "Password";
+"lng_xmpp_bad_jid" = "Please enter a valid XMPP address, for example name@server.";
+"lng_xmpp_connect_failed" = "Could not sign in: {error}";
+"lng_xmpp_connected" = "Signed in as {jid}.";
+
 "lng_signin_title" = "Cloud password check";
 "lng_signin_desc" = "Please enter your cloud password.";
 "lng_signin_recover_desc" = "Please enter the code from the email\n{email}";
