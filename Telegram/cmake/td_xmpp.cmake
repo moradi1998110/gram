@@ -8,10 +8,12 @@ add_library(td_xmpp OBJECT)
 init_non_host_target(td_xmpp)
 add_library(tdesktop::td_xmpp ALIAS td_xmpp)
 
+target_precompile_headers(td_xmpp PRIVATE ${src_loc}/xmpp/xmpp_pch.h)
 nice_target_sources(td_xmpp ${src_loc}
 PRIVATE
     xmpp/xmpp_client.cpp
     xmpp/xmpp_client.h
+    xmpp/xmpp_pch.h
 )
 
 target_include_directories(td_xmpp

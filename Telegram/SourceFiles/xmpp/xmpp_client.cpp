@@ -9,6 +9,7 @@ https://github.com/telegramdesktop/tdesktop/blob/master/LEGAL
 #include <QXmppClient.h>
 #include <QXmppError.h>
 #include <QXmppMessage.h>
+#include <QXmppTask.h>
 
 namespace Xmpp {
 

@@ -9,6 +9,9 @@ RepoPath="$(cd "$ScriptPath/../../.." && pwd)"
 Prefix="$RepoPath/out-qxmpp-install"
 
 "$ScriptPath/build_qxmpp.sh" "$Prefix"
+
+# Report every failing file in one run (see build.sh).
+export KEEP_GOING="${KEEP_GOING:-1}"
 "$RepoPath/Telegram/build/docker/centos_env/build.sh" \
   -D CMAKE_PREFIX_PATH="$Prefix" \
   "$@"
